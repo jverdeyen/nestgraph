@@ -1,0 +1,39 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "3dca7f9efbef4d6fc076f273e9fdf8d7",
+    "packages": [
+        {
+            "name": "gboudreau/nest-api",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:gboudreau/nest-api.git",
+                "reference": "origin/master"
+            },
+            "type": "library"
+        },
+        {
+            "name": "phront/Yahoo-Weather-API-PHP-class",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:phront/Yahoo-Weather-API-PHP-class.git",
+                "reference": "origin/master"
+            },
+            "type": "library"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "platform": {
+        "php": ">=5.3.2"
+    },
+    "platform-dev": []
+}

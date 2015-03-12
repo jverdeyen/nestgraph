@@ -1,0 +1,36 @@
+{
+    "name": "Nest Graph",
+    "description": "Create pretty charts of your Nest thermostat data.",
+    "repositories": {
+        "nest-api": {
+            "type": "package",
+            "package": {
+                "name": "gboudreau/nest-api",
+                "version": "1.0",
+                "source": {
+                    "url": "git@github.com:gboudreau/nest-api.git",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        },
+        "yahoo-weather-api": {
+            "type": "package",
+            "package": {
+                "name": "phront/Yahoo-Weather-API-PHP-class",
+                "version": "1.0",
+                "source": {
+                    "url": "git@github.com:phront/Yahoo-Weather-API-PHP-class.git",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        }
+
+    },
+    "require": {
+        "php":              ">=5.3.2",
+        "gboudreau/nest-api":             "1.0.*",
+        "phront/Yahoo-Weather-API-PHP-class":             "1.0.*"
+    }
+}

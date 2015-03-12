@@ -1,5 +1,4 @@
 config.php
-nest-api-master*
-yahoo-api-master*
 .htpasswd
 .htaccess
+vendor
