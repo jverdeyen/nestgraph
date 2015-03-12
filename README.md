@@ -4,9 +4,9 @@ Create pretty charts of your Nest thermostat data.
 
 ## Background
 
-The point of this project was to see how well the Nest algorithms work. In particuar, the Nest claims to minimize overshoot, which is a common problem with cast-iron radiators. It also claims to know when to start heating in order to hit your target temperature exactly at the time you scheduled it.  
+The point of this project was to see how well the Nest algorithms work. In particuar, the Nest claims to minimize overshoot, which is a common problem with cast-iron radiators. It also claims to know when to start heating in order to hit your target temperature exactly at the time you scheduled it.
 
-Unfortunately, you can't actually access historical temperature data on the Nest website or via the iOS app. It shows you when heating was turned on/off and what the temperature targets were at those times, but it doesn't give you any indication of how well or how poorly the thermostat performed. This could be by design, as it's a lot of information to store.  
+Unfortunately, you can't actually access historical temperature data on the Nest website or via the iOS app. It shows you when heating was turned on/off and what the temperature targets were at those times, but it doesn't give you any indication of how well or how poorly the thermostat performed. This could be by design, as it's a lot of information to store.
 
 This project uses an unofficial Nest API to pull your temperature readings periodically and store them in a database so that you can inspect the data yourself in an easily consumable form.
 
@@ -25,9 +25,8 @@ I also wanted an excuse to play with the [D3](http://d3js.org) (Data-Driven Docu
 ## Dependencies
 
 * LAMP stack
-* Unofficial [nest-api](https://github.com/gboudreau/nest-api) library by Guillaume Boudreau
-* Yahoo Weather API (https://github.com/phront/Yahoo-Weather-API-PHP-class.git yahoo-api-master)
-* D3 Js Library (https://www.d3js.org)
+* Composer
+* Nodejs
 
 ## Getting Started
 
@@ -35,28 +34,25 @@ Clone this repo into your web root.
 
 ```bash
 cd [your-web-root]
-git clone https://github.com/chriseng/nestgraph.git
+git clone https://github.com/jverdeyen/nestgraph.git
 ```
 
-Grab a copy of nest-api and unzip into the ```nestgraph``` directory you created in the previous step. It should create a subdirectory called ```nest-api-master```.
-
-```bash
+Install composer packages
+```
 cd nestgraph
-wget https://github.com/gboudreau/nest-api/archive/master.zip
-unzip master.zip
-rm -f master.zip
-```
-or
-```
-git clone https://github.com/gboudreau/nest-api.git nest-api-master
+composer install
 ```
 
-Grab a copy of the yahoo weather api.
+Install bower
 ```
-git clone https://github.com/phront/Yahoo-Weather-API-PHP-class.git yahoo-api-master
+npm install
 ```
 
-Grab a copy of d3js from http://d3js.org/
+Install bower componentes
+```
+./node_modules/.bin/bower install
+```
+
 
 Open ```inc/config.php``` in a text editor and update the ```nest_user``` and ```nest_pass``` variables with your username and password for nest.com.  Update the ```local_tz``` variable to reflect your time zone.
 
